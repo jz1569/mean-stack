@@ -14,7 +14,7 @@ router.get('/emp', (req, res) => {
     });
 });
 
-router.get('/emp/:name’,(req,res)=>{
+router.get("/emp/:name",(req,res)=> {
     const name = req.params.name;
     MongoClient.connect(uri,(err,db) => {
         ed.getOneEmp(db, name, (result)=>{

@@ -31,7 +31,7 @@ app.controller("homeCtrl",["$scope","es",function ($scope,es){
     }
 }]);
 
-app.controller("updateCtrl",["$scope”,‘es’,“$location”,“$routeParams”,function($scope,es,$location,$routeParams){
+app.controller("updateCtrl",["$scope","es","$location","$routeParams",function($scope,es,$location,$routeParams){
     var name = $routeParams.name;
     es.getOneEmp(name).then(function(resp){
         $scope.emp =resp;
@@ -47,7 +47,7 @@ app.controller("updateCtrl",["$scope”,‘es’,“$location”,“$routeParams
     }
 }])
 
-app.config(["$routeProvider", function($routeProvider) {
+app.config(["$routeProvider", function($routeProvider) { //$routeProvider 做前台路由 定义不同页面
     $routeProvider.when("/home", {
         templateUrl: 'template/home.html',
         controller: "homeCtrl"
