@@ -8,7 +8,7 @@ app.controller("mainCtrl", ["$scope", function($scope){
 }]);
 
 app.controller("addCtrl", ["$scope", "es", "$location", function ($scope, es, $location) {
-    @scope.doClear = function () {
+    $scope.doClear = function () {
         $scope.emp = { };
     }
     $scope.doSubmit = function() {

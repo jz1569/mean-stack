@@ -1,0 +1,27 @@
+<div>
+    <h2>All employee Information</h2>
+    <table class="table table-bordered table-striped">
+        <thead>
+        <th>Name</th>
+        <th>Age</th>
+        <th>City</th>
+        <th>State</th>
+        <th>Operation</th>
+        </thead>
+        <tbody>
+        <tr ng-repeat="emp in empList">
+            <td>{{emp.name}}</td>
+            <td>{{emp.age}}</td>
+            <td>{{emp.address.city}}</td>
+            <td>{{emp.address.state}}</td>
+            <td>
+                <a ng-href="#update/{{emp.name}}">Update</a>
+                <a href="javascript:void(0)" ng-click="doDelete($index)">Delete</a>
+            </td>
+
+        </tr>
+
+
+        </tbody>
+    </table>
+</div>

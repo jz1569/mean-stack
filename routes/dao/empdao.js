@@ -30,6 +30,7 @@ ed.saveOneEmp = (db, emp, callback) => {
     collection.insertOne(emp, (err, result) => {
         callback(result);
     })
+    console.log(emp);
 }
 
 

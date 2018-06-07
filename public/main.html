@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset=“UTF-8">
+    <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
     <script type="text/javascript" src="js/angular.min.js"></script>
@@ -11,15 +11,17 @@
     <script type="text/javascript" src="js/myapp.js"></script>
 </head>
 <body ng-app="mainApp">    <!--angularjs入口 -->
-<div ng-controller=“mainCtrl” class=“container”>
+<div ng-controller="mainCtrl" class="container">
     <h1>Mean stack application</h1>
     <hr>
     <nav>
-        <a href=“#home”>Home</a>
-        <a href=“#Add”>Add</a>
-        <a href=“#Show”>Slide show</a>
+        <a href="#home">Home</a>
+        <a href="#add">add</a>
+        <a href="#show">Slide show</a>
     </nav>
     <div ng-view></div>    <!-- 加载single page的地方-->
 </div>
 </body>
 </html>
+
+
