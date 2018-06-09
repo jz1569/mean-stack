@@ -42,4 +42,11 @@ ed.updateOneEmp = (db, emp, callback) => {
     })
 }
 
+ed.deleteOneEmp = (db, name, callback) => {
+    const collection = db.collection('emp');
+    collection.deleteOne({name: name}, (err, result) => {
+        callback(result);
+    })
+}
+
 module.exports = ed;

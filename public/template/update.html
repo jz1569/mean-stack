@@ -1,0 +1,32 @@
+<div>
+    <h2>Update an employee</h2>
+    <div class="col-sm-6">
+        <form class="form">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" ng-model="emp.name" class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <label for="age">Age</label>
+                <input type="number" id="age" ng-model="emp.age" class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <label for="city">City</label>
+                <input type="text" id="city" ng-model="emp.address.city" class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <label for="state">State</label>
+                <input type="text" id="state" ng-model="emp.address.state" class="form-control" />
+            </div>
+
+            <div>
+                <button class="btn btn-primary" ng-click="doClear()">Reset</button>
+                <button class="btn btn-primary" ng-click="doSubmit()">Submit</button>
+            </div>
+
+        </form>
+    </div>
+</div>

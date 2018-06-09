@@ -24,10 +24,30 @@ router.get('/emp/:name', (req,res) => {
     });
 });
 
-router.post('/emp', (req, res) =>{
+router.post('/emp', (req, res) =>{ //通过router nodejs的中间键 创建后台controller  接收的
     const emp = req.body;
     MongoClient.connect(uri, (err, db) => {
         ed.saveOneEmp(db, emp, (result) => {
+            res.json(result);
+            db.close();
+        });
+    });
+});
+
+router.put('/emp', (req, res) => {
+    const emp = req.body;
+    MongoClient.connect(uri, (err, db) => {
+        ed.updateOneEmp(db, emp, (result) => {
+            res.json(result);
+            db.close();
+        });
+    });
+});
+
+router.delete('/emp/:name', (req, res) => {
+    const name = req.params.name;
+    MongoClient.connect(uri, (err, db) => {
+        ed.deleteOneEmp(db, name, (result) => {
             res.json(result);
             db.close();
         });
